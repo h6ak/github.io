@@ -1,23 +1,45 @@
 import React from 'react';
-import './App.css';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 function App() {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <MenuItem onClick={handleClose}>ホーム</MenuItem>
+          <MenuItem onClick={handleClose}>履歴書</MenuItem>
+          <MenuItem onClick={handleClose}>活動</MenuItem>
+        </Menu>
+        <Typography variant="h6" >
+          Hiro-Aki Hotta
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 }
 
