@@ -10,19 +10,11 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 
-function Home() {
-  return <h2>Home</h2>;
-}
+const Home: React.FunctionComponent = () => <h2>Home</h2>;
+const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
+const Activity: React.FunctionComponent = () => <h2>Activity</h2>;
 
-function CurriculumVitae() {
-  return <h2>Curriculum Vitae</h2>;
-}
-
-function Activity() {
-  return <h2>Activity</h2>;
-}
-
-function App() {
+const App: React.FunctionComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -76,6 +68,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;
