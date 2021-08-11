@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Menu as MenuIcon, Twitter, GitHub, Facebook, Instagram } from '@material-ui/icons';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
@@ -52,6 +52,19 @@ const App: React.FunctionComponent = () => {
           <Typography variant="h6" >
             Hotta, Hiro-Aki
           </Typography>
+          <div style={{ flexGrow: 1 }}></div>
+          <IconButton color="inherit" href="https://twitter.com/h6akh">
+            <Twitter />
+          </IconButton>
+          <IconButton color="inherit" href="https://www.facebook.com/h6ak.hotta">
+            <Facebook />
+          </IconButton>
+          <IconButton color="inherit" href="https://www.instagram.com/h6ak.hotta/">
+            <Instagram />
+          </IconButton>
+          <IconButton color="inherit" href="https://github.com/h6ak">
+            <GitHub />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Switch>
