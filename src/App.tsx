@@ -9,8 +9,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
+import Home from './Home';
 
-const Home: React.FunctionComponent = () => <h2>Home</h2>;
 const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
 const Activity: React.FunctionComponent = () => <h2>Activity</h2>;
 
@@ -49,9 +49,8 @@ const App: React.FunctionComponent = () => {
                   <Link component={RouterLink} to='/activity'>活動</Link>
                 </MenuItem>
             </Menu>
-
           <Typography variant="h6" >
-            Hiro-Aki Hotta
+            Hotta, Hiro-Aki
           </Typography>
         </Toolbar>
       </AppBar>
