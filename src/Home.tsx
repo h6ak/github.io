@@ -1,10 +1,9 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Box from '@material-ui/core/Box';
 import Profile from './Profile';
-
+import Motto from './Motto';
 
 const Home: React.FunctionComponent = () => {
   return (
@@ -12,14 +11,18 @@ const Home: React.FunctionComponent = () => {
       <Typography variant='h1' align='center' gutterBottom>
         Hotta, Hiro-Aki
       </Typography>
-      <Card>
-        <CardContent>
-          <Typography variant='h5' component='h3' gutterBottom>
-            簡易プロフィール
-          </Typography>
-          <Profile />
-        </CardContent>
-      </Card>
+      <Box boxShadow={1} m={2} p={2}>
+        <Typography variant='h5' component='h3' gutterBottom>
+          簡易プロフィール
+        </Typography>
+        <Profile />
+      </Box>
+      <Box boxShadow={1} m={2} p={2}>
+        <Typography variant='h5' component='h3' gutterBottom>
+          座右の銘
+        </Typography>
+        <Motto />
+      </Box>
     </Container>
   );
 };
