@@ -5,7 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import { Menu as MenuIcon, Twitter, GitHub, Facebook, Instagram } from '@material-ui/icons';
+import { Menu as MenuIcon, GitHub } from '@material-ui/icons';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
@@ -13,7 +13,7 @@ import Home from './Home';
 import NotFound from './NotFound';
 
 const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
-const Activity: React.FunctionComponent = () => <h2>Activity</h2>;
+const TVProgram: React.FunctionComponent = () => <h2>TV Program</h2>;
 
 const App: React.FunctionComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -47,23 +47,14 @@ const App: React.FunctionComponent = () => {
                   <Link component={RouterLink} to='/cv'>履歴書</Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link component={RouterLink} to='/activity'>活動</Link>
+                  <Link component={RouterLink} to='/tv'>TV出演</Link>
                 </MenuItem>
             </Menu>
           <Typography variant="h6" >
             Hotta, Hiro-Aki
           </Typography>
           <div style={{ flexGrow: 1 }}></div>
-          <IconButton color="inherit" href="https://twitter.com/h6akh">
-            <Twitter />
-          </IconButton>
-          <IconButton color="inherit" href="https://www.facebook.com/h6ak.hotta">
-            <Facebook />
-          </IconButton>
-          <IconButton color="inherit" href="https://www.instagram.com/h6ak.hotta/">
-            <Instagram />
-          </IconButton>
-          <IconButton color="inherit" href="https://github.com/h6ak">
+          <IconButton color="inherit" href="https://github.com/h6ak/h6ak.github.io">
             <GitHub />
           </IconButton>
         </Toolbar>
@@ -75,8 +66,8 @@ const App: React.FunctionComponent = () => {
         <Route exact path="/cv">
           <CurriculumVitae />
         </Route>
-        <Route exact path="/activity">
-          <Activity />
+        <Route exact path="/tv">
+          <TVProgram />
         </Route>
         <Route>
           <NotFound />

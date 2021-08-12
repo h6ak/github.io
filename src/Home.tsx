@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Profile from './Profile';
 import Motto from './Motto';
+import Activity from './Activity';
 
 const Home: React.FunctionComponent = () => {
   return (
@@ -13,7 +14,7 @@ const Home: React.FunctionComponent = () => {
       </Typography>
       <Box boxShadow={1} m={2} p={2}>
         <Typography variant='h5' component='h3' gutterBottom>
-          簡易プロフィール
+          私は何者？
         </Typography>
         <Profile />
       </Box>
@@ -22,6 +23,12 @@ const Home: React.FunctionComponent = () => {
           座右の銘
         </Typography>
         <Motto />
+      </Box>
+      <Box boxShadow={1} m={2} p={2}>
+        <Typography variant='h5' component='h3' gutterBottom>
+          活動（SNS等）
+        </Typography>
+        <Activity />
       </Box>
     </Container>
   );
