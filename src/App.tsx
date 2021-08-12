@@ -10,10 +10,10 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Home from './home/Home';
+import TVProgram from './TVProgram';
 import NotFound from './NotFound';
 
 const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
-const TVProgram: React.FunctionComponent = () => <h2>TV Program</h2>;
 
 const App: React.FunctionComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
