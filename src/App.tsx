@@ -9,7 +9,7 @@ import { Menu as MenuIcon, GitHub } from '@material-ui/icons';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
-import Home from './Home';
+import Home from './home/Home';
 import NotFound from './NotFound';
 
 const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
