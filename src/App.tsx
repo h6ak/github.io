@@ -10,6 +10,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Home from './Home';
+import NotFound from './NotFound';
 
 const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
 const Activity: React.FunctionComponent = () => <h2>Activity</h2>;
@@ -68,14 +69,17 @@ const App: React.FunctionComponent = () => {
         </Toolbar>
       </AppBar>
       <Switch>
-        <Route path="/cv">
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/cv">
           <CurriculumVitae />
         </Route>
-        <Route path="/activity">
+        <Route exact path="/activity">
           <Activity />
         </Route>
-        <Route path="/">
-          <Home />
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
     </Router>
