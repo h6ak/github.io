@@ -10,10 +10,9 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Home from './home/Home';
+import CurriculumVitae from './cv/CurriculumVitae';
 import TVProgram from './TVProgram';
 import NotFound from './NotFound';
-
-const CurriculumVitae: React.FunctionComponent = () => <h2>Curriculum Vitae</h2>;
 
 const App: React.FunctionComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -28,7 +27,7 @@ const App: React.FunctionComponent = () => {
 
   return (
     <Router>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
             <MenuIcon />
@@ -44,7 +43,7 @@ const App: React.FunctionComponent = () => {
                    <Link component={RouterLink} to='/'>ホーム</Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link component={RouterLink} to='/cv'>履歴書</Link>
+                  <Link component={RouterLink} to='/cv'>経歴</Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <Link component={RouterLink} to='/tv'>TV出演</Link>
